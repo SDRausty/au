@@ -1,0 +1,11 @@
+#!/data/data/com.termux/files/usr/bin/sh -e 
+# Copyright 2017 (c) all rights reserved 
+# by S D Rausty https://sdrausty.github.io
+# Use `dpkg --purge pkg_name` then `dpkg --install pkg_name` to
+# downgrade packages to a previous version of a package if necessary.
+# Ideally you should change /sdcard/debs to an external mirco SD card 
+# directory to save space on device. Contributors: frumpylava, Hax4us
+#####################################################################
+mkdir -p /sdcard/debs
+mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs
+pkg up
