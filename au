@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/sh -e 
+#!/data/data/com.termux/files/usr/bin/sh
 # Copyright 2017 (c) all rights reserved 
 # by S D Rausty https://sdrausty.github.io
 # Use `dpkg --purge pkg_name` then `dpkg --install pkg_name` to
