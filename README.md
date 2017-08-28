@@ -1,6 +1,6 @@
 # -rwxrwx--- au
 
-You can use `au` 📲 to backup you installation files in [Termux,](https://termux.com/) i.e. debs. If you find your system unstable after updating, you can try to use `dpkg --purge pkg_name` and then `dpkg --install pkg_name` to downgrade packages to a previous version of a package in the hope of regaining system stability in [Termux.](https://termux.com/)
+You can use `au` 📲 to backup you installation files in [Termux,](https://termux.com/) i.e. debs. If you find your system unstable after updating, you can try to use `dpkg --purge pkg_name` and then `dpkg --install pkg_name` from `/sdcard/debs` to downgrade packages to a previous version of a package in the hope of regaining system stability in [Termux.](https://termux.com/)
 
 You should use `au` from your `$PATH`. To see your `$PATH`, type `$PATH` +enter/return. Then use `mv au destination_directory` to move `au` to your `$PATH`. `au` +enter/return will update and backup your [Termux](https://termux.com/) in three keystrokes!
 
