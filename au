@@ -7,5 +7,5 @@
 # directory to save space on device. Contributors: frumpylava, Hax4us
 #####################################################################
 mkdir -p /sdcard/debs
+apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y
 mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs
-pkg up
