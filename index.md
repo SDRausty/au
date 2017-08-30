@@ -10,4 +10,4 @@ Every time you want to `apt update && apt upgrade` or `pkg up`, you shall also b
 
 If you find your system unstable, you can use `dpkg --purge pkg_name` and then `dpkg --install pkg_name` from `/sdcard/debs` to downgrade packages to a previous version of a package in the hope of regaining package stability. 
 
-Enjoy utilizing Termux 💪🙂 on device! It's amazing on a smartphone! 
+Enjoy utilizing [Termux](https://termux.com/) 💪🙂 on device! [Termux](https://termux.com/) is completely amazing on a smartphone! 
