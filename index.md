@@ -1,4 +1,4 @@
-[`au`](https://github.com/sdrausty/au/blob/master/au) +enter/return at the Termux 💪🙂 command prompt will update and backup your [Termux](https://termux.com/) installation in three keystrokes! 
+[`au`](https://github.com/sdrausty/au/blob/master/au) +enter/return at the command prompt 💪🙂 in Termux will update and backup your [Termux](https://termux.com/) installation in three keystrokes! 
 
 You can use [`au`](https://github.com/sdrausty/au/blob/master/au) 📲 to backup you installation files in [Termux,](https://termux.com/) i.e. `*.deb` files available for reinstall when need be.. 
 
