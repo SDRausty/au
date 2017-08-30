@@ -1,6 +1,6 @@
 [`au`](https://github.com/sdrausty/au/blob/master/au) +enter/return at the command prompt 💪🙂 in Termux will update and backup your [Termux](https://termux.com/) installation in three keystrokes! 
 
-You can use [`au`](https://github.com/sdrausty/au/blob/master/au) 📲 to backup you installation files in [Termux,](https://termux.com/) i.e. `*.deb` files available for reinstall when need be.. 
+You can use [`au`](https://github.com/sdrausty/au/blob/master/au) 📲 to backup you installation files in [Termux,](https://termux.com/) i.e. `*.deb` files available for reinstallation if need be. 
 
 Should you find your [Termux](https://termux.com/) operating system unstable for any reason after updating, you can try to use `dpkg --purge pkg_name` and then `dpkg --install pkg_name` from `/sdcard/debs` to downgrade packages to a previous version of a package in the hope of regaining system stability in [Termux.](https://termux.com/)
 
