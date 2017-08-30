@@ -1,4 +1,4 @@
-[`au`](https://github.com/sdrausty/au/blob/master/au) +enter/return at the command prompt 💪🙂 in Termux will update and backup your [Termux](https://termux.com/) installation in three keystrokes! 
+[`au`](https://github.com/sdrausty/au/blob/master/au) +enter/return at the command prompt 💪🙂 in [Termux](https://termux.com/) will update and backup your [Termux](https://termux.com/) installation in three keystrokes! 
 
 You can use [`au`](https://github.com/sdrausty/au/blob/master/au) 📲 to backup you installation files in [Termux,](https://termux.com/) i.e. `*.deb` files available for reinstallation if need be. 
 
@@ -10,4 +10,4 @@ Every time you want to `apt update && apt upgrade` or `pkg up`, you shall also b
 
 If you find your system unstable, you can use `dpkg --purge pkg_name` and then `dpkg --install pkg_name` from `/sdcard/debs` to downgrade packages to a previous version of a package in the hope of regaining package stability. 
 
-Enjoy utilizing Termux 💪🙂 It's amazing on device. 
+Enjoy utilizing Termux 💪🙂 on device! It's amazing on a smartphone! 
