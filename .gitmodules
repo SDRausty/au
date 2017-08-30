@@ -1,0 +1,3 @@
+[submodule "dists"]
+	path = dists
+	url = https://github.com/sdrausty/myrepo
