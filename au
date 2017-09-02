@@ -8,4 +8,5 @@
 #####################################################################
 mkdir -p /sdcard/debs
 apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y
+apt -o APT::Keep-Downloaded-Packages="true" install $1 $2 $3
 mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs
