@@ -9,6 +9,8 @@
 mkdir -p /sdcard/debs
 apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y
 mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs
-# Please change /sdcard/debs to micro SD destination on device.
+# Please change /sdcard/debs to micro SD destination on device if 
+# available. Please delete `mkdir -p /sdcard/debs` once the 
+# destination directory has been created on your device.
 # Uncomment the next line to automate installing into `au`.
 # apt -o APT::Keep-Downloaded-Packages="true" install $1 $2 $3
