@@ -1,0 +1,14 @@
+{
+  "name": "au",
+  "version": "0.1",
+  "arch": "all",
+  "maintainer": "@sdrausty",
+  "description": "Simple au",
+  "homepage": "https://sdrausty.github.io/au",
+  "depends": [],
+  "provides": [],
+  "conflicts": [],
+  "files" : {
+    "bin/shebang.sh": "bin/au"
+  }
+}
