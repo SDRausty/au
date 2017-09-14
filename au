@@ -13,7 +13,7 @@ mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs
 # line 9. Please delete `mkdir -p /sdcard/debs` once this destination 
 # directory has been created on your device. Change /sdcard/debs to a 
 # micro SD destination to save space on device if available. 
-# Important, uncomment the next apt install line to automate 
+# IMPORTANT: Uncomment the next apt install line to automate 
 # installing into au. Moving the next apt line between 
-# lines 10 & 11 (apt update & mv) is the ideal thing to do.
+# lines 10 & 11 (apt update & mv) is preferred.
 # apt -o APT::Keep-Downloaded-Packages="true" install $1 $2 $3
