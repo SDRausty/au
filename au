@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/sh
 # Copyright 2017 (c) all rights reserved 
-# by S D Rausty https://sdrausty.github.io
+# by S D Rausty https://sdrausty.github.io/au
 # Use `dpkg --purge pkg_name` then `dpkg --install pkg_name` to
 # downgrade packages to a previous version of a package if necessary.
 # Ideally you should change /sdcard/debs to an external mirco SD card 
@@ -9,9 +9,11 @@
 mkdir -p /sdcard/debs
 apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y
 mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs
-# Please change /sdcard/debs to micro SD destination on device if 
-# available. Please delete `mkdir -p /sdcard/debs` once the 
-# destination directory has been created on your device.
-# Uncomment the next apt install line to automate installing into au.
-# Moving the next line between lines 10 & 11 is an ideal thing to do.
+# Once the /sdcard/debs directory is created, you can safely delete 
+# line 9. Please delete `mkdir -p /sdcard/debs` once this destination 
+# directory has been created on your device. Change /sdcard/debs to a 
+# micro SD destination to save space on device if available. 
+# Important, uncomment the next apt install line to automate 
+# installing into au. Moving the next apt line between 
+# lines 10 & 11 (apt update & mv) is the ideal thing to do.
 # apt -o APT::Keep-Downloaded-Packages="true" install $1 $2 $3
