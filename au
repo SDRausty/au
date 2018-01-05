@@ -8,7 +8,7 @@
 #####################################################################
 mkdir -p /sdcard/debs
 apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y
-mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs
+mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs 2>/dev/null
 # Once the /sdcard/debs directory is created, you can safely delete 
 # line 9. Please delete `mkdir -p /sdcard/debs` once this destination 
 # directory has been created on your device. Change /sdcard/debs to a 
