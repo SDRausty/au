@@ -16,4 +16,4 @@ mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs 2>/dev/null
 # IMPORTANT: Uncomment the next apt install line to automate 
 # installing into au. Moving the next apt line between 
 # lines 10 & 11 (apt update... & mv...) is preferred.
-# apt -o APT::Keep-Downloaded-Packages="true" install $1 $2 $3 $4 -y
+# apt -o APT::Keep-Downloaded-Packages="true" install $@ -y
