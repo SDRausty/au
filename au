@@ -1,5 +1,5 @@
 #!/bin/env sh
-# Copyright 2017 (c) all rights reserved 
+# Copyright 2017-2018 (c) all rights reserved 
 # by S D Rausty https://sdrausty.github.io/au
 # Use `dpkg --purge pkg_name` then `dpkg --install pkg_name` to
 # downgrade packages to a previous version of a package if necessary.
