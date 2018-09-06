@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/env sh
 # Copyright 2017 (c) all rights reserved 
 # by S D Rausty https://sdrausty.github.io/au
 # Use `dpkg --purge pkg_name` then `dpkg --install pkg_name` to
@@ -14,6 +14,6 @@ mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs 2>/dev/null
 # directory has been created on your device. Change /sdcard/debs to a 
 # micro SD destination to save space on device if available. 
 # IMPORTANT: Uncomment the next apt install line to automate 
-# installing into au. Moving the next apt line between 
-# lines 10 & 11 (apt update... & mv...) is preferred.
+# installing into au if on high speed connection. Moving the next apt 
+# line between lines 10 & 11 (apt update... & mv...) is preferred:
 # apt -o APT::Keep-Downloaded-Packages="true" install $@ -y
