@@ -5,7 +5,8 @@
 # External microSD card destination is preferred to save much space on device.
 ################################################################################
 set -e
-VAR="./stnderr.$(date +%s).log"
+VA=<"$(date +%s)" # SEARCH: redirect command to variable site:tldp.org
+VAR="./aerr.$VA.log" # http://www.tldp.org/LDP/abs/html/commandsub.html
 mkdir -p "/storage/emulated/0/tdebs"
 apt update 2>"$VAR" # updates packe list 
 apt -o APT::Keep-Downloaded-Packages="true" upgrade -y 2>"$VAR" # upgrades
