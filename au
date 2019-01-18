@@ -1,19 +1,16 @@
 #!/bin/env sh
-# Copyright 2017-2018 (c) all rights reserved 
-# by S D Rausty https://sdrausty.github.io/au
-# Use `dpkg --purge pkg_name` then `dpkg --install pkg_name` to
-# downgrade packages to a previous version of a package if necessary.
-# Ideally you should change /sdcard/debs to an external mirco SD card 
-# directory to save space on device. Contributors: frumpylava, Hax4us
-#####################################################################
-mkdir -p "/storage/emulated/0/debs"
-apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y
-mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs 2>/dev/null
-# Once the /sdcard/debs directory is created, you can safely delete 
-# line 9. Please delete `mkdir -p /sdcard/debs` once this destination 
-# directory has been created on your device. Change /sdcard/debs to a 
-# micro SD destination to save space on device if available. 
-# IMPORTANT: Uncomment the next apt install line to automate 
-# installing into au if on high speed connection. Moving the next apt 
-# line between lines 10 & 11 (apt update... & mv...) is preferred:
-# apt -o APT::Keep-Downloaded-Packages="true" install $@ -y
+# Copyright 2017-2019 (c) all rights reserved by SDRausty.
+# https://sdrausty.github.io/au  Contributors: frumpylava/Glow, Hax4us
+# $ dpkg --purge name.pkg; dpkg --install name.pkg  ## can downgrade packages. 
+# External microSD card destination is preferred to save much space on device.
+################################################################################
+set -e
+VAR="./stnderr.$(date +%s).log"
+mkdir -p "/storage/emulated/0/tdebs"
+apt update 2>"$VAR" # updates packe list 
+apt -o APT::Keep-Downloaded-Packages="true" upgrade -y 2>"$VAR" # upgrades
+apt -o APT::Keep-Downloaded-Packages="true" install $@ -y # installs packages.
+mv "$PREFIX/var/cache/apt/archives/*.deb" /storage/emulated/0/tdebs 2>"$VAR"
+cat "$VAR"    ## A microSDcard destination to save space on device is preferred.
+
+#OEF
