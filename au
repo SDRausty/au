@@ -6,7 +6,7 @@
 # Ideally you should change /sdcard/debs to an external mirco SD card 
 # directory to save space on device. Contributors: frumpylava, Hax4us
 #####################################################################
-mkdir -p /sdcard/debs
+mkdir -p "/storage/emulated/0/debs"
 apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y
 mv $PREFIX/var/cache/apt/archives/*.deb /sdcard/debs 2>/dev/null
 # Once the /sdcard/debs directory is created, you can safely delete 
