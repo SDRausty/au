@@ -5,12 +5,10 @@
 # External microSD card destination is preferred to save much space on device.
 ################################################################################
 set -e
-VAR="./aerr.$(date +%s).log" 
-mkdir -p "/storage/emulated/0/tdebs"
-apt update 2>"$VAR" # updates packe list 
-apt -o APT::Keep-Downloaded-Packages="true" upgrade -y 2>"$VAR" # upgrades
-apt -o APT::Keep-Downloaded-Packages="true" install $@ -y 2>"$VAR" # installs
-mv "$PREFIX/var/cache/apt/archives/*.deb" /storage/emulated/0/tdebs 2>"$VAR"
-# cat "$VAR"  ## A microSDcard destination to save space on device is preferred.
+mkdir -p "/storage/emulated/0/tdebs" 
+apt update # updates packe list 
+apt -o APT::Keep-Downloaded-Packages="true" upgrade -y # upgrades
+apt -o APT::Keep-Downloaded-Packages="true" install $@ -y # installs
+mv "$PREFIX"/var/cache/apt/archives/*.deb /storage/emulated/0/tdebs >&2 ## In order to save native space on device, change ^the path above^ to a microSDcard destination.
 
 #OEF
