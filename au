@@ -6,7 +6,7 @@
 ################################################################################
 set -e
 mkdir -p "/storage/emulated/0/tdebs" 
-apt update # updates packe list 
+apt update # updates packages list 
 apt -o APT::Keep-Downloaded-Packages="true" upgrade -y # upgrades
 apt -o APT::Keep-Downloaded-Packages="true" install $@ -y # installs
 mv "$PREFIX"/var/cache/apt/archives/*.deb /storage/emulated/0/tdebs >&2 
