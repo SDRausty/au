@@ -1,8 +1,8 @@
 #!/bin/env sh
 # Copyright 2017-2019 (c) all rights reserved by SDRausty.
 # https://sdrausty.github.io/au  Contributors: frumpylava/Glow, Hax4us
-# $ dpkg --purge name.pkg; dpkg --install name.pkg  ## can downgrade packages. 
-# External microSD card destination is preferred to save much space on device.
+# $ dpkg --purge name.pkg; dpkg --install name.pkg  ## downgrades packages. 
+# External microSD card destination is preferred to save space on devices.
 ################################################################################
 set -e
 mkdir -p "/storage/emulated/0/tdebs" 
