@@ -4,7 +4,6 @@
 # $ dpkg --purge name.pkg; dpkg --install name.pkg  ## downgrades packages. 
 # External microSD card destination is preferred to save space on devices.
 ################################################################################
-set -e
 mkdir -p "/storage/emulated/0/tdebs" 
 apt update # updates packages list 
 apt -o APT::Keep-Downloaded-Packages="true" upgrade -y # upgrades
