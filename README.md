@@ -1,5 +1,3 @@
-# [-r--r--r-- au](https://raw.githubusercontent.com/sdrausty/au/master/au)
-
 ##### -rwxrwx--- [au](https://wae.github.io/au/au)
 ##### -r--r--r-- [au](https://raw.githubusercontent.com/WAE/au/master/au)
 
@@ -12,6 +10,6 @@ Every time you want to `apt update && apt upgrade` or `pkg up`, you shall also b
 
 If you find your system unstable, you can use `dpkg --purge pkg_name` and then `dpkg --install pkg_name` from `/sdcard/debs` to downgrade packages to a previous version of a package in the hope of regaining package stability. 
 
-Important: Please use `apt -o APT::Keep-Downloaded-Packages="true" install package_name(s)` to populate your backup directory in conjunction with [`au`](https://raw.githubusercontent.com/sdrausty/au/master/au) to ensure that you can enjoy a full backup of `*.deb` files on device. 
+Important: Please use `apt -o APT::Keep-Downloaded-Packages="true" install package_name(s)` to populate your backup directory in conjunction with [`au`](https://raw.githubusercontent.com/WAE/au/master/au) to ensure that you can enjoy a full backup of `*.deb` files on device. 
 
 <!-- README.md EOF -->
