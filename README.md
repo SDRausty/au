@@ -1,6 +1,8 @@
 <link rel="prerender" href="https://serviceanimals.github.io/Redding/">
 
-# [au](https://github.com/WAE/au)
+# [au repository](https://github.com/WAE/au)
+# [au page](https://wae.github.io/au/)
+
 
 #### -rwxrwx--- [au](https://wae.github.io/au/au)
 #### -r--r--r-- [au](https://raw.githubusercontent.com/WAE/au/master/au)
