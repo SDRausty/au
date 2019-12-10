@@ -1,7 +1,7 @@
 # [au](https:/github.com/WAE/au)
 
 #### -rwxrwx--- [au](https:/wae.github.io/au/au)
-#### -r--r--r-- [au](https:/raw.githubusercontent.com/WAE/au/master/au)
+#### -r--r--r-- [au](https://raw.githubusercontent.com/WAE/au/master/au)
 
 Tapping [`au`](https:/raw.githubusercontent.com/sdrausty/au/master/au) at the command prompt 💪 in [Termux 🙂 ](https:/github.com/termux/) will update and backup your [Termux](https:/github.com/termux/) installation in three keystrokes! You can use [`au`](https:/github.com/sdrausty/au/blob/master/au) 📲 to backup your installation files in [Termux,](https:/github.com/termux/) i.e. `*.deb` files available for reinstallation, if the need should arise on your Android or Chrome device. 
 
