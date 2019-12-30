@@ -8,6 +8,7 @@
 │   └── LICENSE.mit
 ├── index.md
 ├── manifest.json
-└── tree.file
+├── sha512.sum
+└── tree
 
-1 directory, 9 files
+1 directory, 10 files
