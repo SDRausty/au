@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env sh
 # Copyright 2017-2020 (c) all rights reserved by SDRausty.
 # https://sdrausty.github.io/au  Contributors: frumpylava/Glow, Hax4us
 # $ dpkg --purge name.pkg; dpkg --install name.pkg  ## downgrades packages. 
