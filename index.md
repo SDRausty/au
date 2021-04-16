@@ -1,3 +1,4 @@
+<link rel="prerender" href="https://sdrausty.github.io/au/">
 # [au](https://github.com/SDRausty/au)
 
 #### -r--r--r-- [au](https://raw.githubusercontent.com/SDRausty/au/master/au)
