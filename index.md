@@ -13,5 +13,4 @@ You should use the script [`au`](https://github.com/sdrausty/au/blob/master/au) 
 Every time you want to `apt update && apt upgrade` and `pkg up`, you will also be backing up your former installation debs to `/storage/emulated/0/Android/data/com.termux/txdebs` by using [`au`.](https://github.com/sdrausty/au/blob/master/au) Ideally, you should change `/storage/emulated/0/Android/data/com.termux/txdebs` to an external mirco SD card destination in lines 8 and 10 of [au](https://github.com/sdrausty/au/blob/master/au) to save space on device!
 
 If you find your system unstable, you can use `dpkg --purge pkg_name` and then `dpkg --install pkg_name` from `/storage/emulated/0/Android/data/com.termux/txdebs` to downgrade packages to a previous version of a package in the hope of regaining package stability. Enjoy utilizing [Termux](https://termux.com/) 💪🙂 on device! [Termux](https://termux.com/) is completely amazing on a smartphone and/or a tablet in you pocket! 
-
-Important: Please use `apt -o APT::Keep-Downloaded-Packages="true" install package_name(s)` to populate your backup directory in conjunction with `au` to ensure that you can enjoy a full backup of `*.deb` files on device. 
+<!--au index.md EOF-->

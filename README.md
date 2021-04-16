@@ -13,4 +13,4 @@ You should use [`au`](https://raw.githubusercontent.com/SDRausty/au/master/au) f
 Every time you want to `apt update && apt upgrade` or `pkg up`, you will also be backing up your former installation debs to `/storage/emulated/0/Android/data/com.termux/txdebs` by using `au`. Ideally, you should change `/storage/emulated/0/Android/data/com.termux/txdebs` to an external mirco SD card destination in lines 9 and 11 of au to save space on device.
 
 If you find your system unstable, you can use `dpkg --purge pkg_name` and then `dpkg --install pkg_name` from `/storage/emulated/0/Android/data/com.termux/txdebs` to downgrade packages to a previous version of a package in the hope of regaining package stability. 
-<!-- README.md EOF -->
+<!--au README.md EOF-->
