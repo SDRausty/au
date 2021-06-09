@@ -5,7 +5,7 @@
 # An external microSD card path is preferred in order to save native space
 # on device, change path /storage/emulated/0/txdebs to a microSDcard destination.
 ################################################################################
-mkdir -p "/storage/emulated/0/Android/data/com.termux/txdebs/" 
+mkdir -p "/storage/emulated/0/Android/media/com.termux/txdebs/" 
 # update, upgrade and install packages or print message
 ( apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y && apt -o APT::Keep-Downloaded-Packages="true" install $@ -y  && mv "$PREFIX"/var/cache/apt/archives/*.deb /storage/emulated/0/Android/data/com.termux/txdebs/ >&2 ) || printf "\\n%s\\n\\n" "Something unexpected occured;  Please study the last lines of output, and run ${0##*/} again to install and auto update packages!" 
 # au EOF
