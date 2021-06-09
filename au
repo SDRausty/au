@@ -2,7 +2,7 @@
 # Copyright 2017-2021 (c) all rights reserved by SDRausty, see LICENSE.
 # https://sdrausty.github.io/au  Contributors: frumpylava/Glow, Hax4us
 # $ dpkg --purge name.pkg; dpkg --install name.pkg  ## downgrades packages. 
-# An external microSD card path is preferred in order to save native space on device, change path /storage/emulated/0/Android/data/com.termux/txdebs to a microSDcard destination.
+# An external microSD card path is preferred in order to save native space on device, change path /storage/emulated/0/Android/data/com.termux/txdebs to a microSDcard destination to save native space on device.
 ################################################################################
 mkdir -p "/storage/emulated/0/Android/media/com.termux/txdebs/" 
 # update, upgrade and install packages or print message
