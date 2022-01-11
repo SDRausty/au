@@ -2,9 +2,9 @@
 # Copyright 2017-2022 (c) all rights reserved by SDRausty, see LICENSE.
 # https://sdrausty.github.io/au  Contributors: frumpylava/Glow, Hax4us
 # $ dpkg --purge name.pkg; dpkg --install name.pkg  ## downgrades packages. 
-# An external microSD card path is preferred in order to save native space on device, change path /storage/emulated/0/Android/media/com.termux/txdebs to a microSDcard destination to save native space on device.
+# An external microSD card path is preferred in order to save native space on device, change path /storage/emulated/0/Android/data/com.termux/txdebs to a microSDcard destination to save native space on device.
 ################################################################################
-cd /storage/emulated/0/Android/media/com.termux/ && mkdir -p txdebs || printf '%s\n' "Please create the '/storage/emulated/0/Android/media/com.termux/txdebs/' directory;  Continuing..."
+cd /storage/emulated/0/Android/data/com.termux/ && mkdir -p txdebs || printf '%s\n' "Please create the '/storage/emulated/0/Android/data/com.termux/txdebs/' directory;  Continuing..."
 # update, upgrade and install packages or print message
-( apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y && apt -o APT::Keep-Downloaded-Packages="true" install $@ -y && find /data/data/com.termux/cache/apt/archives/ -maxdepth 1 -type f -name "*.deb" -exec mv -f {} /storage/emulated/0/Android/media/com.termux/txdebs/ \; ) || printf "\\n%s\\n\\n" "Something unexpected occured;  Please study the last lines of output, and run ${0##*/} again to install and auto update packages!" 
+( apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y && apt -o APT::Keep-Downloaded-Packages="true" install $@ -y && find /data/data/com.termux/cache/apt/archives/ -maxdepth 1 -type f -name "*.deb" -exec mv -f {} /storage/emulated/0/Android/data/com.termux/txdebs/ \; ) || printf "\\n%s\\n\\n" "Something unexpected occured;  Please study the last lines of output, and run ${0##*/} again to install and auto update packages!" 
 # au EOF
