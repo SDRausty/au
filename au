@@ -6,5 +6,5 @@
 ################################################################################
 cd /storage/emulated/0/Android/data/com.termux/ && mkdir -p txdebs || printf '%s\n' "Please create the '/storage/emulated/0/Android/data/com.termux/txdebs/' directory;  Continuing..."
 # update, upgrade and install packages or print message
-( apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y && apt -o APT::Keep-Downloaded-Packages="true" install $@ -y && find /data/data/com.termux/cache/apt/archives/ -maxdepth 1 -type f -name "*.deb" -exec mv -f {} /storage/emulated/0/Android/data/com.termux/txdebs/ \; ) || printf "\\n%s\\n\\n" "Something unexpected occured;  Please study the last lines of output, and run ${0##*/} again to install and auto update packages!" 
+( apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y && apt -o APT::Keep-Downloaded-Packages="true" install $@ -y && find /data/data/com.termux/cache/apt/archives/ -maxdepth 1 -type f -name "*.deb" -exec mv -f {} /storage/emulated/0/Android/data/com.termux/txdebs/ \; ) || printf "\\n%s\\n\\n" "Something unexpected occured;  Please study the first lines of output, and run ${0##*/} again to install and auto update packages!" 
 # au EOF
