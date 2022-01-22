@@ -4,6 +4,7 @@
 # $ dpkg --purge name.pkg; dpkg --install name.pkg  ## downgrades packages. 
 # An external microSD card path is preferred in order to save native space on device, change path /storage/emulated/0/Android/media/com.termux/txdebs to a microSDcard destination to save native space on device.
 ################################################################################
+set -u
 _AUDIR_ () {
 [ -e /storage/emulated/0/Android/media/com.termux/txdebs ] || ( cd /storage/emulated/0/Android/media/com.termux/ && mkdir -p txdebs ) || printf '%s' "Please create directory '/storage/emulated/0/Android/media/com.termux/' in Android.  If an micro sdcard is being used, '/storage/1234-5678/Android/media/com.termux/' and similar can be used after modifying ${0##*/};  "
 }
@@ -14,7 +15,6 @@ _AUGET_ () {
 _PD_ () { _PRNT_ "Command '${0##*/}':  DONE" ; }
 _PRNT_ () { printf "%s\\n" "$1" ; } # print message with one trialing newline
 _PB_ () { _PRNT_ "Command '${0##*/}':  BEGUN... " ; }
-set -u
 PVAR="$(ping -n 1 1.1.1.1 2>&1)"
 set -e
 if [ -n "${PVAR##*unreachable*}" ]
