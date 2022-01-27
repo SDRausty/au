@@ -4,17 +4,17 @@
 # $ dpkg --purge name.pkg; dpkg --install name.pkg  ## downgrades packages. 
 # An external microSD card path is preferred in order to save native space on device, change path /storage/emulated/0/Android/media/com.termux/txdebs to a microSDcard destination to save native space on device.
 ################################################################################
-set -u
 _AUDIR_ () {
-[ -e /storage/emulated/0/Android/media/com.termux/txdebs ] || ( cd /storage/emulated/0/Android/media/com.termux/ && mkdir -p txdebs ) || printf '%s' "Please create directory '/storage/emulated/0/Android/media/com.termux/' in Android.  If an micro sdcard is being used, '/storage/1234-5678/Android/media/com.termux/' and similar can be used after modifying ${0##*/};  "
+[ -e /storage/emulated/0/Android/media/com.termux/txdebs ] || { cd /storage/emulated/0/Android/media/com.termux/ && mkdir -p txdebs ; } || printf '%s' "Please create directory '/storage/emulated/0/Android/media/com.termux/' in Android.  If an micro sdcard is being used, '/storage/1234-5678/Android/media/com.termux/' and similar can be used after modifying ${0##*/};  "
 }
 # update, upgrade and install packages or print message
 _AUGET_ () {
-( apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y && apt -o APT::Keep-Downloaded-Packages="true" install $@ -y  && find /data/data/com.termux/cache/apt/archives/ -maxdepth 1 -type f -name "*.deb" -exec mv -f {} /storage/emulated/0/Android/media/com.termux/txdebs/ \; ) || printf "\\n%s\\n\\n" "Something unexpected occured;  Please study the first lines of the error output, and run ${0##*/} again to install and auto update packages!" 
+{ apt update && apt -o APT::Keep-Downloaded-Packages="true" upgrade -y && apt -o APT::Keep-Downloaded-Packages="true" install $@ -y  && find /data/data/com.termux/cache/apt/archives/ -maxdepth 1 -type f -name "*.deb" -exec mv -f {} /storage/emulated/0/Android/media/com.termux/txdebs/ \; ; } || printf "\\n%s\\n\\n" "Something unexpected occured;  Please study the first lines of the error output, and run ${0##*/} again to install and auto update packages!" 
 }
 _PD_ () { _PRNT_ "Command '${0##*/}':  DONE" ; }
 _PRNT_ () { printf "%s\\n" "$1" ; } # print message with one trialing newline
 _PB_ () { _PRNT_ "Command '${0##*/}':  BEGUN... " ; }
+set -u
 PVAR="$(ping -n 1 1.1.1.1 2>&1)"
 set -e
 if [ -n "${PVAR##*unreachable*}" ]
