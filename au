@@ -28,4 +28,4 @@ else
         printf '%s;  Please check your wireless connection and run %s again.  Exiting... ' "$PVAR" "'${0##*/}'"
 	_PD_
 fi
-# au EOF
+# au FE
