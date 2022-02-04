@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
-# Copyright 2017-2022 (c) all rights reserved by SDRausty, see LICENSE.
-# $ dpkg --purge name.pkg; dpkg --install name.pkg  ## downgrades packages. 
-# In order to save native space on device the path /storage/emulated/0/Android/data/com.termux/txdebs can be changed to a microSDcard destination.
+# Copyright 2017-2022 (c) all rights reserved by SDRausty, please see LICENSE.
 # https://sdrausty.github.io/au  Contributors: Glow/frumpylava, Hax4us
+# In order to save native space on device the path /storage/emulated/0/Android/data/com.termux/txdebs can be changed to a microSDcard destination.
+# dpkg --purge name.pkg ; dpkg --install name.pkg # can downgrade packages 
 ################################################################################
 set -eu
 _AUDIR_ () { [ -e /storage/emulated/0/Android/data/com.termux/txdebs ] || { cd /storage/emulated/0/Android/data/com.termux/ && mkdir -p txdebs ; } || _PRIT_ printf '%s' "Please create directory '/storage/emulated/0/Android/data/com.termux/' in Android.  If an external micro sdcard is being used, '/storage/1234-5678/Android/{data,media}/com.termux/' can be used after modifying the path in the ${0##*/} command;  " ; }
