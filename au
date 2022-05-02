@@ -12,13 +12,5 @@ _PD_ () { _PRNT_ "Command '${0##*/}':  DONE" ; }
 _PRIT_ () { printf "%s" "$1" ; } # print message with no trialing newline
 _PRNT_ () { printf "%s\\n" "$1" ; } # print message with one trialing newline
 _PB_ () { _PRNT_ "Command '${0##*/}':  BEGUN... " ; }
-set +e
-PVAR="$(ping -n 1 1.1.1.1 2>&1)"
-set -e
-if [ -n "${PVAR##*unreachable*}" ]
-then
-	_PB_ && _AUDIR_ && _AUGET_ "$@" && _PD_
-else
-	_PB_ && _PRIT_ "$PVAR;  Please check your wireless connection and run '${0##*/}' again.  Exiting..." && _PD_
-fi
+_PB_ && _AUDIR_ && _AUGET_ "$@" && _PD_
 # SDRausty/au FE
